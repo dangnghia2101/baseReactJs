@@ -1,6 +1,6 @@
 module.exports = {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier", "react", "import"],
+  "plugins": ["@typescript-eslint", "prettier", "react"],
   env: {
     browser: true,
     jest: true,
@@ -13,7 +13,6 @@ module.exports = {
     'prettier',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     "plugin:storybook/recommended"
@@ -41,22 +40,6 @@ module.exports = {
         assertFunctionNames: ['expect', 'testSaga', 'expectSaga'],
       },
     ],
-    'import/order': [
-      'error',
-      {
-        'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
-        'newlines-between': 'always',
-        'alphabetize': { order: 'asc', caseInsensitive: true },
-        'warnOnUnassignedImports': true
-      },
-    ],
-    'import/default': 'off',
-    'import/no-extraneous-dependencies': 0,
-    'import/no-named-as-default-member': 'off',
-    'import/no-named-as-default': 'off',
-    'import/extensions': 0,
-    'import/no-unresolved': 0,
-    'import/prefer-default-export': 0,
 
     'react/function-component-definition': [
       2,
@@ -67,6 +50,13 @@ module.exports = {
     ],
 
     "react/react-in-jsx-scope": "off",
+    'import/default': 'off',
+    'import/no-extraneous-dependencies': 0,
+    'import/no-named-as-default-member': 'off',
+    'import/no-named-as-default': 'off',
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
+    'import/prefer-default-export': 0,
 
     'jsx-a11y/anchor-is-valid': 'off',
 

@@ -3,7 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from 'components/Layout'
 
-const HomePage = React.lazy(() => import('pages/HomePage'))
+// const { HomePage } = React.lazy(() => import('pages/HomePage/HomePage'))
+const HomePage = React.lazy(() =>
+  import('pages/HomePage').then(module => ({ default: module.HomeScreen })),
+)
 const AboutPage = React.lazy(() => import('pages/AboutPage'))
 
 const AppRoutes = () => (
